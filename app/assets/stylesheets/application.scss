@@ -16,9 +16,11 @@
 .navbar {
 	background-color: black !important;
 }
+
 #home-container {
 margin-top: 25px;	
 }
+
 .nav-link {
 	color: white !important;
 }
@@ -41,16 +43,15 @@ margin-top: 25px;
 
 }
 
-html,
+ html,
 body {
-	height: 100;
+  height: 100%;
 }
 
-#page-content{
-	flex: 1 0 auto;
-	background-color: lightgrey;
+#page-content {
+  flex: 1 0 auto;
 }
 
 #sticky-footer {
   flex-shrink: none;
- }
+}
