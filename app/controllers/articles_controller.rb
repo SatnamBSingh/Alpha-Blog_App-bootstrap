@@ -40,16 +40,8 @@ class ArticlesController < ApplicationController
    
   def destroy
     if @article.destroy
-      puts "------------------------------"
-      puts "index destroy"
-      puts "------------------------------"
-      puts "------------------------------"
       redirect_to articles_path
     else
-      puts "*************************************"
-      puts "*************************************"
-      puts "*************************************"
-      puts "*************************************"
     end
   end
 
@@ -64,7 +56,7 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user && !current_user.admin?
     flash[:alert] = "You can only edit or delete your own article"
     redirect_to @article
   end
